@@ -1,0 +1,1 @@
+# josm-ja-naming-sample-preset-xml
