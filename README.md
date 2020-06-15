@@ -1,1 +1,1 @@
-# josm-ja-naming-sample-preset-xml
+# osmwiki-ja-naming-sample-to-josm-preset-xml
