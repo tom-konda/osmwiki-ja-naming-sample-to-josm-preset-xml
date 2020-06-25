@@ -5,6 +5,9 @@
   "repository": "https://github.com/tom-konda/osmwiki-ja-naming-sample-to-josm-preset-xml.git",
   "author": "Tom Konda <tom.konda.dev@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=12.18.0"
+  },
   "private": "true",
   "dependencies": {
     "wtf_wikipedia": "^8.3.0",
