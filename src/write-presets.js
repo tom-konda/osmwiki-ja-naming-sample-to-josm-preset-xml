@@ -1,7 +1,9 @@
 import xmlBuilder from 'xmlBuilder';
+import {writeFile} from 'fs/promises';
 
 export async function writeXML(wikiTables) {
   let chunks = [];
+  const groups = wikiTables.map(
     wikiTable => {
       const {key, value, description, candidates} = wikiTable;
       chunks.push({
@@ -49,8 +51,10 @@ export async function writeXML(wikiTables) {
       chunk: chunks,
       group: {
         '@name': 'OSM wiki JA:Naming sample',
+        group : groups,
       },
     }
   };
   const presetRoot = xmlBuilder.create(presetRootObj).end({pretty: true});
+  return writeFile('./dist/presets.xml', presetRoot);
 }

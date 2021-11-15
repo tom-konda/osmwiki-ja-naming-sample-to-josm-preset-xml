@@ -4,7 +4,7 @@ OSM wiki の [JA:Naming sample](https://wiki.openstreetmap.org/wiki/JA:Naming_sa
 
 # 実行方法
 
-Node.js v12.18.0 以上がインストールされている状態で下記のコマンドを実行してください。`./dist/presets.xml` にプリセットファイルが作成されます。
+Node.js v14.15.0 以上がインストールされている状態で下記のコマンドを実行してください。`./dist/presets.xml` にプリセットファイルが作成されます。
 
 ```sh
 node index.mjs
