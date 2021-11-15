@@ -30,7 +30,6 @@ wtf.extend((models, templates) => {
 
 export async function parseWiki() {
   const osm = await wtf.fetch('JA:Naming_sample', { domain: 'wiki.openstreetmap.org', path: 'w/api.php'});
-  const wikiText = osm.data.wiki;
   const [...wikiTextSectionTitles] = wikiText.match(/==.+?==/g);
   const [...sectionWikitexts] = wikiText.split(/==.+?==\n/g);
   const sectionTitles = [...[''], ...wikiTextSectionTitles];

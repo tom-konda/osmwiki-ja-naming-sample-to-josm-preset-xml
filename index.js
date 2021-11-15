@@ -1,5 +1,5 @@
-import {parseWiki} from './src/parse-osmwiki.mjs';
-import {writeXML} from './src/write-presets.mjs';
+import {parseWiki} from './src/parse-osmwiki.js';
+import {writeXML} from './src/write-presets.js';
 
 (
   async () => {
