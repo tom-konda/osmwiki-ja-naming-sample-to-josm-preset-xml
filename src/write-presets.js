@@ -15,6 +15,7 @@ export async function writeXML(wikiTables) {
       });
       const keys = candidates.map(
         candidate => {
+          let itemElement = {};
           const keys = [];
           const texts = [];
           candidate.forEach(
@@ -24,9 +25,11 @@ export async function writeXML(wikiTables) {
               }
               if (key.includes('name') || key.includes('brand')) {
                 if (key === 'name') {
+                  itemElement = {
                     '@name': value,
                     '@type': 'node,closedway',
                     '@preset_name_label': 'true',
+                  };
                 }
                 keys.push({'@key': key, '@value': value});
               }
@@ -35,6 +38,15 @@ export async function writeXML(wikiTables) {
               }
             }
           );
+          itemElement = {
+            ...itemElement,
+            ...{
+              reference: {'@ref': `${key}_${value}`},
+              key: keys,
+              text: texts,
+            }
+          }
+          return itemElement;
         }
       )
       return {
