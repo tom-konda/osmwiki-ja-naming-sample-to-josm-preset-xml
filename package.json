@@ -12,7 +12,7 @@
   },
   "private": "true",
   "dependencies": {
-    "wtf_wikipedia": "^8.3.0",
+    "wtf_wikipedia": "^9.0.1",
     "xmlbuilder": "^15.1.1"
   }
 }
