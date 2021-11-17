@@ -57,6 +57,8 @@ export async function writeXML(wikiTables) {
   )
   const presetRootObj = {
     presets: {
+      '@xmlns': 'https://josm.openstreetmap.de/tagging-preset-1.0',
+      '@author': 'Tom Konda and OSM wiki contributors',
       '@version': Date.now(),
       '@shortdescription': 'OSM wiki JA:Naming sample presets',
       '@baselanguage': 'ja',
