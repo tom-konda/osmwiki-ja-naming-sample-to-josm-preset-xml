@@ -7,7 +7,10 @@ OSM wiki の [JA:Naming sample](https://wiki.openstreetmap.org/wiki/JA:Naming_sa
 Node.js v14.15.0 以上がインストールされている状態で下記のコマンドを実行してください。`./dist/presets.xml` にプリセットファイルが作成されます。
 
 ```sh
-node index.mjs
+# インストールは初回のみ必要 (yarn install でも可)
+npm install
+# 以下はプリセット作成時は毎回実行が必要
+node index.js
 ```
 
 # ライセンス
